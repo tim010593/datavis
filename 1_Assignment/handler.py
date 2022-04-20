@@ -25,3 +25,12 @@ data['value'] = pd.to_numeric(data['value'], errors='ignore')
 data
 # show all "type" fields for selection
 data.type.unique()
+
+# filter data for step count and value of it
+steps = data.loc[data['type'] == 'HKQuantityTypeIdentifierStepCount']
+
+datevalue = steps[['creationDate', 'value']]
+# show stepcount with value 
+datevalue
+
+# dataframe from datevalue? 
